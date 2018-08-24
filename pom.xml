@@ -19,7 +19,119 @@
 								<scope>test</scope>
 				</dependency>
 		</dependencies>
+  <build>
+		<plugins>
+						  <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-antrun-plugin</artifactId>
+			<version>1.1</version>
+		
+		        <executions>
+					<execution>
+							<phase>validate</phase>
+							<id>validate</id>
+								<goals>
+									<goal>run</goal>
+								</goals>
+									<configuration>
+											<tasks>
+												 <echo> =======================>>>>>>>>>>>>>>>>validate phase</echo>
+											</tasks>
+									</configuration>
+					</execution>
+					
+					
+					
+					<execution>
+							<phase>compile</phase>
+							<id>compile</id>
+								<goals>
+									<goal>run</goal>
+								</goals>
+									<configuration>
+											<tasks>
+												<echo>=============>>>>>>>>>>>>> Compilation____ phase </echo>
+												<echo>                           ================= </echo>
+											</tasks>
+									</configuration>
+					</execution>
+					
+					
+					<execution>
+							<phase>test</phase>
+							<id>test</id>
+								<goals>
+									<goal>run</goal>
+								</goals>
+									<configuration>
+											<tasks>
+												<echo>=============>>>>>>>>>>>>> Unit_TEst phase </echo>
+												<echo>                          =================</echo>
+											</tasks>
+									</configuration>
+					</execution>
+					
+					
+					<execution>
+							<phase>package</phase>
+							<id>package</id>
+									<goals>
+										<goal>run</goal>
+									</goals>
+											<configuration>
+													<tasks>
+														<echo>=============>>>>>>>>>>>> Package phase </echo>
 
+														<echo>===========_============ </echo>
+
+														<echo>===================================== </echo>
+
+													</tasks>
+											</configuration>
+					</execution>
+					
+					
+										<execution>
+							<phase>install</phase>
+							<id>install</id>
+									<goals>
+										<goal>run</goal>
+									</goals>
+											<configuration>
+													<tasks>
+														<echo>=============>>>>>>>>>>>>> Install Phase </echo>
+
+														<echo>===========_============ </echo>
+
+														<echo>===================================== </echo>
+
+													</tasks>
+											</configuration>
+					</execution>
+					
+					
+					
+					
+					
+					<execution>
+							<phase>deploy</phase>
+							<id>deploy</id>
+									<goals>
+										<goal>run</goal>
+									</goals>
+										<configuration>
+												<tasks>
+													<echo>=============>>>>>>>>>> Deploy in to NexusRepo </echo>
+													<echo>==========================Deploy==phase ========== </echo>
+												</tasks>
+										</configuration>
+					</execution>
+					
+					
+				</executions>
+		 </plugin>
+		</plugins>
+  </build>
 			<distributionManagement>
 								<repository>
 										<uniqueVersion>false</uniqueVersion>
