@@ -1,21 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>facebook</groupId>
-  <artifactId>ebay</artifactId>
-  <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+			<groupId>facebook</groupId>
+			<artifactId>ebay</artifactId>
+			<packaging>war</packaging>
+			<version>1.0.0.${BUILD_NUMBER}</version>
+			
+		
   <name>ebay Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <finalName>ebay</finalName>
-  </build>
+  
+  
+		<dependencies>
+				<dependency>
+								<groupId>junit</groupId>
+								<artifactId>junit</artifactId>
+								<version>3.8.1</version>
+								<scope>test</scope>
+				</dependency>
+		</dependencies>
+
+			<distributionManagement>
+								<repository>
+										<uniqueVersion>false</uniqueVersion>
+										<id>NexusRepo</id>
+										<name>Internal Releasesl</name>
+										<url>http://192.168.99.100:8081/nexus/content/repositories/releases/</url>
+										<layout>default</layout>
+								</repository>
+
+								<snapshotRepository>
+											<uniqueVersion>true</uniqueVersion>
+											<id>NexusRepo</id>
+											<name>Propellors Snapshots</name>
+											<url>http://192.168.99.100:8081/nexus/content/repositories/snapshots/</url>
+								</snapshotRepository>
+			</distributionManagement>   
+
 </project>
