@@ -51,7 +51,7 @@
 									<configuration>
 											<tasks>
 												<echo>=============>>>>>>>>>>>>> Compilation____ phase </echo>
-												<echo>                           ================= </echo>
+												<echo>                           ============= </echo>
 											</tasks>
 									</configuration>
 					</execution>
